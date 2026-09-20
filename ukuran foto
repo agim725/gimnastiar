@@ -1,4 +1,6 @@
+<header>
 <style>
+<img src="Muhamad Gimnastiar.jpeg" alt="Foto Muhamad" class="profile-img">
 .profile-img {
   width: 150px;       /* atur lebar foto */
   height: 150px;      /* atur tinggi foto */
@@ -8,3 +10,4 @@
   margin-bottom: 15px;
 }
 </style>
+</header>
