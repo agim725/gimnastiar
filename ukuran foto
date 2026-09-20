@@ -1,0 +1,8 @@
+.profile-img {
+  width: 150px;       /* atur lebar foto */
+  height: 150px;      /* atur tinggi foto */
+  object-fit: cover;  /* menjaga proporsi */
+  border-radius: 50%; /* membuat bulat */
+  border: 4px solid white;
+  margin-bottom: 15px;
+}
