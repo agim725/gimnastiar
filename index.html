@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Pribadi Muhamad Gimnastiar</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f9;
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      background: #4CAF50;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    nav {
+      background: #333;
+      padding: 15px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav a {
+      color: white;
+      margin: 0 20px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      color: #4CAF50;
+    }
+    section {
+      padding: 60px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    .card {
+      background: white;
+      padding: 30px;
+      margin: 30px 0;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+    button {
+      background: #4CAF50;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      cursor: pointer;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+    button:hover {
+      background: #45a049;
+    }
+
+    /* Animasi Scroll */
+    .hidden {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 0.8s ease-out;
+    }
+    .show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Selamat Datang di Web Pribadi Muhamad Gimnastiar</h1>
+    <p>Mahasiswa | Web Developer | Content Creator</p>
+  </header>
+
+  <nav>
+    <a href="#tentang">Tentang Saya</a>
+    <a href="#portofolio">Portofolio</a>
+    <a href="#kontak">Kontak</a>
+  </nav>
+
+  <section id="tentang">
+    <div class="card hidden">
+      <h2>Tentang Saya</h2>
+      <p>Halo, saya Muhamad. Saya tertarik pada dunia teknologi, pengembangan web, dan pembuatan konten digital. Web ini dibuat untuk berbagi informasi tentang diri saya dan karya-karya saya.</p>
+    </div>
+  </section>
+
+  <section id="portofolio">
+    <div class="card hidden">
+      <h2>Portofolio</h2>
+      <ul>
+        <li>Website Company Profile</li>
+        <li>Aplikasi To-Do List</li>
+        <li>Blog Pribadi</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="kontak">
+    <div class="card hidden">
+      <h2>Kontak: 087789374223</h2>
+      <p>Email: nastiaragim725@gmail.com</p>
+      <p>Instagram: @nastiaragim725</p>
+      <button onclick="alert('Terima kasih sudah menghubungi saya!')">Kirim Pesan</button>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 Muhamad Gimnastiar. Semua Hak Dilindungi.</p>
+  </footer>
+
+  <script>
+    const hiddenElements = document.querySelectorAll('.hidden');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    });
+    hiddenElements.forEach((el) => observer.observe(el));
+  </script>
+</body>
+</html>
